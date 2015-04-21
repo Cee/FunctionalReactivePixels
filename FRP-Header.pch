@@ -1,0 +1,23 @@
+//
+//  FRP-Header.pch
+//  FunctionalReactivePixels
+//
+//  Created by Cee on 20/04/2015.
+//  Copyright (c) 2015 Cee. All rights reserved.
+//
+
+#ifndef FunctionalReactivePixels_FRP_Header_pch
+#define FunctionalReactivePixels_FRP_Header_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// Pods
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <500px-iOS-api/PXAPI.h>
+#import <libextobjc/EXTScope.h>
+#import "AppDelegate.h"
+
+#define FRPAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+#endif

@@ -5,6 +5,36 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "92D7BAEE1AE48083009E3D35"
+               BuildableName = "FunctionalReactivePixels.app"
+               BlueprintName = "FunctionalReactivePixels"
+               ReferencedContainer = "container:FunctionalReactivePixels.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "92D7BB071AE48083009E3D35"
+               BuildableName = "FunctionalReactivePixelsTests.xctest"
+               BlueprintName = "FunctionalReactivePixelsTests"
+               ReferencedContainer = "container:FunctionalReactivePixels.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -12,7 +42,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "92D7BB071AE48083009E3D35"
+               BuildableName = "FunctionalReactivePixelsTests.xctest"
+               BlueprintName = "FunctionalReactivePixelsTests"
+               ReferencedContainer = "container:FunctionalReactivePixels.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "92D7BAEE1AE48083009E3D35"
+            BuildableName = "FunctionalReactivePixels.app"
+            BlueprintName = "FunctionalReactivePixels"
+            ReferencedContainer = "container:FunctionalReactivePixels.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -23,6 +72,16 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "92D7BAEE1AE48083009E3D35"
+            BuildableName = "FunctionalReactivePixels.app"
+            BlueprintName = "FunctionalReactivePixels"
+            ReferencedContainer = "container:FunctionalReactivePixels.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -32,6 +91,16 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "92D7BAEE1AE48083009E3D35"
+            BuildableName = "FunctionalReactivePixels.app"
+            BlueprintName = "FunctionalReactivePixels"
+            ReferencedContainer = "container:FunctionalReactivePixels.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
