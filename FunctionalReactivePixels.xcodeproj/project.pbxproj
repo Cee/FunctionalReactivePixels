@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		39B215521ECBD46DEFC7E1F6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		90361E82E7400500C72AF1A1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		927E033D1AE676CB0098540A /* FRP-Header.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FRP-Header.pch"; sourceTree = "<group>"; };
 		927E033E1AE676CB0098540A /* FRPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FRPCell.h; path = FunctionalReactivePixels/FRPCell.h; sourceTree = "<group>"; };
 		927E033F1AE676CB0098540A /* FRPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FRPCell.m; path = FunctionalReactivePixels/FRPCell.m; sourceTree = "<group>"; };
 		927E03401AE676CB0098540A /* FRPFullSizePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FRPFullSizePhotoViewController.h; path = FunctionalReactivePixels/FRPFullSizePhotoViewController.h; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		927E03491AE676CB0098540A /* FRPPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FRPPhotoModel.m; path = FunctionalReactivePixels/FRPPhotoModel.m; sourceTree = "<group>"; };
 		927E034A1AE676CB0098540A /* FRPPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FRPPhotoViewController.h; path = FunctionalReactivePixels/FRPPhotoViewController.h; sourceTree = "<group>"; };
 		927E034B1AE676CB0098540A /* FRPPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FRPPhotoViewController.m; path = FunctionalReactivePixels/FRPPhotoViewController.m; sourceTree = "<group>"; };
+		927E03531AE67EAC0098540A /* FRP-Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FRP-Header.pch"; sourceTree = "<group>"; };
 		92D7BAEF1AE48083009E3D35 /* FunctionalReactivePixels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionalReactivePixels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D7BAF31AE48083009E3D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D7BAF41AE48083009E3D35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		92D7BAF11AE48083009E3D35 /* FunctionalReactivePixels */ = {
 			isa = PBXGroup;
 			children = (
-				927E033D1AE676CB0098540A /* FRP-Header.pch */,
+				927E03531AE67EAC0098540A /* FRP-Header.pch */,
 				924E57931AE56E6D00D8010F /* View */,
 				924E57921AE56E6100D8010F /* API */,
 				924E578A1AE555B400D8010F /* ViewController */,
