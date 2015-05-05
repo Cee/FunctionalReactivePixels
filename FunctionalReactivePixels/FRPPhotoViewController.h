@@ -16,5 +16,6 @@
 
 @property (nonatomic, readonly) NSInteger photoIndex;
 @property (nonatomic, readonly) FRPPhotoModel *photoModel;
+@property (nonatomic, weak) UIImageView *imageView;
 
 @end

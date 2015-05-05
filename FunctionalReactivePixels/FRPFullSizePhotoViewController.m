@@ -9,11 +9,13 @@
 #import "FRPFullSizePhotoViewController.h"
 #import "FRPPhotoModel.h"
 #import "FRPPhotoViewController.h"
+#import "SVProgressHUD.h"
 
 @interface FRPFullSizePhotoViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray *photoModelArray;
 @property (nonatomic, strong) UIPageViewController *pageViewController;
+@property (nonatomic, weak) FRPPhotoViewController *currentController;
 
 @end
 
@@ -49,6 +51,9 @@
     
     self.pageViewController.view.frame = self.view.bounds;
     [self.view addSubview:self.pageViewController.view];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                                           target:self
+                                                                                           action:@selector(saveBtnPressed)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,10 +95,27 @@
         
         FRPPhotoViewController *photoViewController = [[FRPPhotoViewController alloc] initWithPhotoModel:photoModel
                                                                                                    index:index];
+        self.currentController = photoViewController;
         return photoViewController;
     }
     
     return nil;
+}
+
+- (void)saveBtnPressed
+{
+    UIImage *image = self.currentController.imageView.image;
+    [SVProgressHUD showWithStatus:@"Saving..."];
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error != NULL) {
+        [SVProgressHUD showErrorWithStatus:@"Error!"];
+    } else {
+        [SVProgressHUD showSuccessWithStatus:@"Success!"];
+    }
 }
 /*
 #pragma mark - Navigation
