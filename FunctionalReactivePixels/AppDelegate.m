@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "FRPGalleryViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
 @property (nonatomic, readwrite) PXAPIHelper *apiHelper;
+@property (nonatomic, strong) UITabBarController *tabBarController;
 @end
 
 @implementation AppDelegate
@@ -24,7 +25,33 @@
                                       consumerSecret:@"i8WL4chWoZ4kw9fh3jzHK7XzTer1y5tUNvsTFNnB"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[FRPGalleryViewController alloc] init]];
+    
+    // Setup Tabbar Controller
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.delegate = self;
+    
+    // Setup Controllers
+    UIViewController *popularViewController = [[UINavigationController alloc] initWithRootViewController:
+                                               [[FRPGalleryViewController alloc] initWithFeature:PXAPIHelperPhotoFeaturePopular]];
+    UIViewController *editorsViewController = [[UINavigationController alloc] initWithRootViewController:
+                                               [[FRPGalleryViewController alloc] initWithFeature:PXAPIHelperPhotoFeatureEditors]];
+    UIViewController *upcomingViewController = [[UINavigationController alloc] initWithRootViewController:
+                                                [[FRPGalleryViewController alloc] initWithFeature:PXAPIHelperPhotoFeatureUpcoming]];
+    
+    // Setup Tabbar Item
+    popularViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Popular"
+                                                                     image:[UIImage imageNamed:@"popular"]
+                                                                       tag:1];
+    editorsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Choice"
+                                                                     image:[UIImage imageNamed:@"choice"]
+                                                                       tag:2];
+    upcomingViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Upcoming"
+                                                                      image:[UIImage imageNamed:@"upcoming"]
+                                                                        tag:3];
+    
+    self.tabBarController.viewControllers = @[popularViewController, editorsViewController, upcomingViewController];
+    self.window.rootViewController = self.tabBarController;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

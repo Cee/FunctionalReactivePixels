@@ -14,16 +14,18 @@
 
 @interface FRPGalleryViewController () <FRPFullSizePhotoViewControllerDelegate>
 @property (nonatomic, strong) NSArray *photosArray;
+@property (nonatomic) PXAPIHelperPhotoFeature feature;
 @end
 
 @implementation FRPGalleryViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 
-- (id)init
+- (id)initWithFeature:(PXAPIHelperPhotoFeature)feature
 {
     FRPGalleryFlowLayout *flowLayout = [[FRPGalleryFlowLayout alloc] init];
     self = [self initWithCollectionViewLayout:flowLayout];
+    self.feature = feature;
     if (!self) {
         return nil;
     }
@@ -33,9 +35,21 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    self.title = @"Popular on 500px";
     
+    switch (self.feature) {
+        case PXAPIHelperPhotoFeaturePopular:
+            self.title = @"Popular";
+            break;
+        case PXAPIHelperPhotoFeatureEditors:
+            self.title = @"Choice";
+            break;
+        case PXAPIHelperPhotoFeatureUpcoming:
+            self.title = @"Upcoming";
+            break;
+        default:
+            break;
+    }
+    self.collectionView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg"]];
     // Register cell classes
     [self.collectionView registerClass:[FRPCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
@@ -45,7 +59,7 @@ static NSString * const reuseIdentifier = @"Cell";
         [self.collectionView reloadData];
     }];
     
-    [self loadPopularPhotos];
+    [self loadPopularPhotosWithFeature:self.feature];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,6 +86,7 @@ static NSString * const reuseIdentifier = @"Cell";
     FRPFullSizePhotoViewController *viewController = [[FRPFullSizePhotoViewController alloc] initWithPhotoModels:self.photosArray
                                                                                                currentPhotoIndex:indexPath.item];
     viewController.delegate = self;
+    viewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
@@ -87,9 +102,9 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark - Private Method
 
-- (void)loadPopularPhotos
+- (void)loadPopularPhotosWithFeature:(PXAPIHelperPhotoFeature)type
 {
-    [[FRPPhotoImporter importPhotos] subscribeNext:^(id array) {
+    [[FRPPhotoImporter importPhotosWithFeatureType:type] subscribeNext:^(id array) {
         self.photosArray = array;
     } error:^(NSError *error) {
         NSLog(@"Couldn't fetch photos from 500px: %@", error);

@@ -23,12 +23,14 @@
     self = [super initWithFrame:frame];
     if (!self) return nil;
     
-    self.backgroundColor = [UIColor darkGrayColor];
+    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cell_bg"]];
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
     imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.contentView addSubview:imageView];
     self.imageView = imageView;
+    self.layer.cornerRadius = 10.f;
+    self.layer.masksToBounds = YES;
     
     return self;
 }

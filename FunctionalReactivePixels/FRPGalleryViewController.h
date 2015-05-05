@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FRPGalleryViewController : UICollectionViewController
-
+- (id)initWithFeature:(PXAPIHelperPhotoFeature)feature;
 @end

@@ -11,11 +11,10 @@
 
 @implementation FRPPhotoImporter
 
-+ (RACReplaySubject *)importPhotos
++ (RACReplaySubject *)importPhotosWithFeatureType:(PXAPIHelperPhotoFeature)type
 {
     RACReplaySubject *subject = [RACReplaySubject subject];
-    
-    NSURLRequest *request = [self popularURLRequest];
+    NSURLRequest *request = [self photoURLRequestWithType:type];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -68,10 +67,10 @@
 
 #pragma mark - Private Methods
 
-+ (NSURLRequest *)popularURLRequest
++ (NSURLRequest *)photoURLRequestWithType:(PXAPIHelperPhotoFeature)type
 {
-    return [FRPAppDelegate.apiHelper urlRequestForPhotoFeature:PXAPIHelperPhotoFeaturePopular
-                                                resultsPerPage:10
+    return [FRPAppDelegate.apiHelper urlRequestForPhotoFeature:type
+                                                resultsPerPage:20
                                                           page:0
                                                     photoSizes:PXPhotoModelSizeThumbnail
                                                      sortOrder:PXAPIHelperSortOrderRating

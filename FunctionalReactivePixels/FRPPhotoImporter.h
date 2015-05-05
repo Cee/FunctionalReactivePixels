@@ -12,7 +12,7 @@
 
 @interface FRPPhotoImporter : NSObject
 
-+ (RACSignal *)importPhotos;
++ (RACSignal *)importPhotosWithFeatureType:(PXAPIHelperPhotoFeature)type;
 + (RACReplaySubject *)fetchPhotoDetails:(FRPPhotoModel *)photoModel;
 
 @end
