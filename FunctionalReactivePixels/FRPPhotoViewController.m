@@ -36,14 +36,15 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor clearColor];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64,
+                                                                           self.view.bounds.size.width,
+                                                                           self.view.bounds.size.height - 64)];
     RAC(imageView, image) = [RACObserve(self.photoModel, fullsizedData) map:^id(id value) {
         return [UIImage imageWithData:value];
     }];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:imageView];
     self.imageView = imageView;
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated

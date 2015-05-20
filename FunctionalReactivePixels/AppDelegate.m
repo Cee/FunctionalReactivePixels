@@ -37,19 +37,25 @@
                                                [[FRPGalleryViewController alloc] initWithFeature:PXAPIHelperPhotoFeatureEditors]];
     UIViewController *upcomingViewController = [[UINavigationController alloc] initWithRootViewController:
                                                 [[FRPGalleryViewController alloc] initWithFeature:PXAPIHelperPhotoFeatureUpcoming]];
+    UIViewController *todayViewController = [[UINavigationController alloc] initWithRootViewController:
+                                                [[FRPGalleryViewController alloc] initWithFeature:PXAPIHelperPhotoFeatureFreshToday]];
     
     // Setup Tabbar Item
+    todayViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Today"
+                                                                   image:[UIImage imageNamed:@"today"]
+                                                                     tag:1];
     popularViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Popular"
                                                                      image:[UIImage imageNamed:@"popular"]
-                                                                       tag:1];
+                                                                       tag:2];
     editorsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Choice"
                                                                      image:[UIImage imageNamed:@"choice"]
-                                                                       tag:2];
+                                                                       tag:3];
     upcomingViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Upcoming"
                                                                       image:[UIImage imageNamed:@"upcoming"]
-                                                                        tag:3];
+                                                                        tag:4];
+
     
-    self.tabBarController.viewControllers = @[popularViewController, editorsViewController, upcomingViewController];
+    self.tabBarController.viewControllers = @[todayViewController, popularViewController, editorsViewController, upcomingViewController];
     self.window.rootViewController = self.tabBarController;
     
     self.window.backgroundColor = [UIColor whiteColor];

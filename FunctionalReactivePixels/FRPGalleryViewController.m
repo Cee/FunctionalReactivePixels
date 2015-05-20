@@ -11,8 +11,10 @@
 #import "FRPPhotoImporter.h"
 #import "FRPCell.h"
 #import "FRPFullSizePhotoViewController.h"
+#import "SVProgressHUD.h"
 
 @interface FRPGalleryViewController () <FRPFullSizePhotoViewControllerDelegate>
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (nonatomic, strong) NSArray *photosArray;
 @property (nonatomic) PXAPIHelperPhotoFeature feature;
 @end
@@ -46,6 +48,9 @@ static NSString * const reuseIdentifier = @"Cell";
         case PXAPIHelperPhotoFeatureUpcoming:
             self.title = @"Upcoming";
             break;
+        case PXAPIHelperPhotoFeatureFreshToday:
+            self.title = @"Today";
+            break;
         default:
             break;
     }
@@ -53,13 +58,23 @@ static NSString * const reuseIdentifier = @"Cell";
     // Register cell classes
     [self.collectionView registerClass:[FRPCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
+    // Refresh Control
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self action:@selector(loadPictures)
+                  forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:self.refreshControl];
+    self.collectionView.alwaysBounceVertical = YES;
+    
     @weakify(self);
     [RACObserve(self, photosArray) subscribeNext:^(id x) {
         @strongify(self);
         [self.collectionView reloadData];
+        [self.refreshControl endRefreshing];
     }];
     
-    [self loadPopularPhotosWithFeature:self.feature];
+    
+    [self loadPictures];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -100,6 +115,13 @@ static NSString * const reuseIdentifier = @"Cell";
                                         animated:NO];
 }
 
+#pragma mark - Property
+
+- (UIRefreshControl *)refreshControl
+{
+    return _refreshControl = _refreshControl ?: [UIRefreshControl new];
+}
+
 #pragma mark - Private Method
 
 - (void)loadPopularPhotosWithFeature:(PXAPIHelperPhotoFeature)type
@@ -109,6 +131,13 @@ static NSString * const reuseIdentifier = @"Cell";
     } error:^(NSError *error) {
         NSLog(@"Couldn't fetch photos from 500px: %@", error);
     }];
+}
+
+- (void)loadPictures
+{
+    [self loadPopularPhotosWithFeature:self.feature];
+//    [SVProgressHUD showSuccessWithStatus:@"刷新是騙你的"];
+    
 }
 
 @end
