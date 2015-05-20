@@ -20,7 +20,6 @@
 		92D7BAFE1AE48083009E3D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D7BAFC1AE48083009E3D35 /* Main.storyboard */; };
 		92D7BB001AE48083009E3D35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D7BAFF1AE48083009E3D35 /* Images.xcassets */; };
 		92D7BB031AE48083009E3D35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D7BB011AE48083009E3D35 /* LaunchScreen.xib */; };
-		92D7BB0F1AE48083009E3D35 /* FunctionalReactivePixelsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D7BB0E1AE48083009E3D35 /* FunctionalReactivePixelsTests.m */; };
 		C92B4AA730C3B83B3A87FA42 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B215521ECBD46DEFC7E1F6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +51,7 @@
 		927E034A1AE676CB0098540A /* FRPPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FRPPhotoViewController.h; path = FunctionalReactivePixels/FRPPhotoViewController.h; sourceTree = "<group>"; };
 		927E034B1AE676CB0098540A /* FRPPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FRPPhotoViewController.m; path = FunctionalReactivePixels/FRPPhotoViewController.m; sourceTree = "<group>"; };
 		927E03531AE67EAC0098540A /* FRP-Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FRP-Header.pch"; sourceTree = "<group>"; };
-		92D7BAEF1AE48083009E3D35 /* 500Pixels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 500Pixels.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92D7BAEF1AE48083009E3D35 /* FunctionalReacitvePixels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionalReacitvePixels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D7BAF31AE48083009E3D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D7BAF41AE48083009E3D35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92D7BAF61AE48083009E3D35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,9 +61,7 @@
 		92D7BAFD1AE48083009E3D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92D7BAFF1AE48083009E3D35 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		92D7BB021AE48083009E3D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		92D7BB081AE48083009E3D35 /* 500PixelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 500PixelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		92D7BB0D1AE48083009E3D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92D7BB0E1AE48083009E3D35 /* FunctionalReactivePixelsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionalReactivePixelsTests.m; sourceTree = "<group>"; };
+		92D7BB081AE48083009E3D35 /* FunctionalReacitvePixelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionalReacitvePixelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB439A27FA5AE6283FAD821 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,8 +149,7 @@
 		92D7BAE61AE48083009E3D35 = {
 			isa = PBXGroup;
 			children = (
-				92D7BAF11AE48083009E3D35 /* 500Pixels */,
-				92D7BB0B1AE48083009E3D35 /* 500PixelsTests */,
+				92D7BAF11AE48083009E3D35 /* FunctionalReacitvePixels */,
 				92D7BAF01AE48083009E3D35 /* Products */,
 				E667026505D6FE93E38B7196 /* Pods */,
 				92C01123D3F066C61F49DA77 /* Frameworks */,
@@ -163,13 +159,13 @@
 		92D7BAF01AE48083009E3D35 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92D7BAEF1AE48083009E3D35 /* 500Pixels.app */,
-				92D7BB081AE48083009E3D35 /* 500PixelsTests.xctest */,
+				92D7BAEF1AE48083009E3D35 /* FunctionalReacitvePixels.app */,
+				92D7BB081AE48083009E3D35 /* FunctionalReacitvePixelsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		92D7BAF11AE48083009E3D35 /* 500Pixels */ = {
+		92D7BAF11AE48083009E3D35 /* FunctionalReacitvePixels */ = {
 			isa = PBXGroup;
 			children = (
 				927E03531AE67EAC0098540A /* FRP-Header.pch */,
@@ -187,7 +183,7 @@
 				92D7BB011AE48083009E3D35 /* LaunchScreen.xib */,
 				92D7BAF21AE48083009E3D35 /* Supporting Files */,
 			);
-			name = 500Pixels;
+			name = FunctionalReacitvePixels;
 			path = FunctionalReactivePixels;
 			sourceTree = "<group>";
 		};
@@ -196,24 +192,6 @@
 			children = (
 				92D7BAF31AE48083009E3D35 /* Info.plist */,
 				92D7BAF41AE48083009E3D35 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		92D7BB0B1AE48083009E3D35 /* 500PixelsTests */ = {
-			isa = PBXGroup;
-			children = (
-				92D7BB0E1AE48083009E3D35 /* FunctionalReactivePixelsTests.m */,
-				92D7BB0C1AE48083009E3D35 /* Supporting Files */,
-			);
-			name = 500PixelsTests;
-			path = FunctionalReactivePixelsTests;
-			sourceTree = "<group>";
-		};
-		92D7BB0C1AE48083009E3D35 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				92D7BB0D1AE48083009E3D35 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -230,9 +208,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		92D7BAEE1AE48083009E3D35 /* 500Pixels */ = {
+		92D7BAEE1AE48083009E3D35 /* FunctionalReacitvePixels */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92D7BB121AE48083009E3D35 /* Build configuration list for PBXNativeTarget "500Pixels" */;
+			buildConfigurationList = 92D7BB121AE48083009E3D35 /* Build configuration list for PBXNativeTarget "FunctionalReacitvePixels" */;
 			buildPhases = (
 				1209C6C7DDBC2F9F3C078D3C /* Check Pods Manifest.lock */,
 				92D7BAEB1AE48083009E3D35 /* Sources */,
@@ -244,14 +222,14 @@
 			);
 			dependencies = (
 			);
-			name = 500Pixels;
+			name = FunctionalReacitvePixels;
 			productName = FunctionalReactivePixels;
-			productReference = 92D7BAEF1AE48083009E3D35 /* 500Pixels.app */;
+			productReference = 92D7BAEF1AE48083009E3D35 /* FunctionalReacitvePixels.app */;
 			productType = "com.apple.product-type.application";
 		};
-		92D7BB071AE48083009E3D35 /* 500PixelsTests */ = {
+		92D7BB071AE48083009E3D35 /* FunctionalReacitvePixelsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92D7BB151AE48083009E3D35 /* Build configuration list for PBXNativeTarget "500PixelsTests" */;
+			buildConfigurationList = 92D7BB151AE48083009E3D35 /* Build configuration list for PBXNativeTarget "FunctionalReacitvePixelsTests" */;
 			buildPhases = (
 				92D7BB041AE48083009E3D35 /* Sources */,
 				92D7BB051AE48083009E3D35 /* Frameworks */,
@@ -262,9 +240,9 @@
 			dependencies = (
 				92D7BB0A1AE48083009E3D35 /* PBXTargetDependency */,
 			);
-			name = 500PixelsTests;
+			name = FunctionalReacitvePixelsTests;
 			productName = FunctionalReactivePixelsTests;
-			productReference = 92D7BB081AE48083009E3D35 /* 500PixelsTests.xctest */;
+			productReference = 92D7BB081AE48083009E3D35 /* FunctionalReacitvePixelsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -286,7 +264,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 92D7BAEA1AE48083009E3D35 /* Build configuration list for PBXProject "500Pixels" */;
+			buildConfigurationList = 92D7BAEA1AE48083009E3D35 /* Build configuration list for PBXProject "FunctionalReacitvePixels" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -299,8 +277,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92D7BAEE1AE48083009E3D35 /* 500Pixels */,
-				92D7BB071AE48083009E3D35 /* 500PixelsTests */,
+				92D7BAEE1AE48083009E3D35 /* FunctionalReacitvePixels */,
+				92D7BB071AE48083009E3D35 /* FunctionalReacitvePixelsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -380,7 +358,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92D7BB0F1AE48083009E3D35 /* FunctionalReactivePixelsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +366,7 @@
 /* Begin PBXTargetDependency section */
 		92D7BB0A1AE48083009E3D35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 92D7BAEE1AE48083009E3D35 /* 500Pixels */;
+			target = 92D7BAEE1AE48083009E3D35 /* FunctionalReacitvePixels */;
 			targetProxy = 92D7BB091AE48083009E3D35 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -502,7 +479,7 @@
 				GCC_PREFIX_HEADER = "FRP-Header.pch";
 				INFOPLIST_FILE = FunctionalReactivePixels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = 500Pixels;
+				PRODUCT_NAME = FunctionalReacitvePixels;
 			};
 			name = Debug;
 		};
@@ -514,7 +491,7 @@
 				GCC_PREFIX_HEADER = "FRP-Header.pch";
 				INFOPLIST_FILE = FunctionalReactivePixels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = 500Pixels;
+				PRODUCT_NAME = FunctionalReacitvePixels;
 			};
 			name = Release;
 		};
@@ -532,7 +509,7 @@
 				);
 				INFOPLIST_FILE = FunctionalReactivePixelsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = 500PixelsTests;
+				PRODUCT_NAME = FunctionalReacitvePixelsTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FunctionalReactivePixels.app/FunctionalReactivePixels";
 			};
 			name = Debug;
@@ -547,7 +524,7 @@
 				);
 				INFOPLIST_FILE = FunctionalReactivePixelsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = 500PixelsTests;
+				PRODUCT_NAME = FunctionalReacitvePixelsTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FunctionalReactivePixels.app/FunctionalReactivePixels";
 			};
 			name = Release;
@@ -555,7 +532,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92D7BAEA1AE48083009E3D35 /* Build configuration list for PBXProject "500Pixels" */ = {
+		92D7BAEA1AE48083009E3D35 /* Build configuration list for PBXProject "FunctionalReacitvePixels" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92D7BB101AE48083009E3D35 /* Debug */,
@@ -564,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92D7BB121AE48083009E3D35 /* Build configuration list for PBXNativeTarget "500Pixels" */ = {
+		92D7BB121AE48083009E3D35 /* Build configuration list for PBXNativeTarget "FunctionalReacitvePixels" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92D7BB131AE48083009E3D35 /* Debug */,
@@ -573,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92D7BB151AE48083009E3D35 /* Build configuration list for PBXNativeTarget "500PixelsTests" */ = {
+		92D7BB151AE48083009E3D35 /* Build configuration list for PBXNativeTarget "FunctionalReacitvePixelsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92D7BB161AE48083009E3D35 /* Debug */,
