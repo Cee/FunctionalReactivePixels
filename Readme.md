@@ -17,11 +17,19 @@ An app that can browse and download pictures from  the website `500px`.
 
 ## Build & Run
 1. Install & Setup Cocoapods
-		gem install cocoapods
-		pod setup
+
+	``` bash
+	gem install cocoapods
+	pod setup
+	```
+	
 2. Install Dependencies
-		pod install
-        pod update
+
+	``` bash
+	pod install
+	pod update
+	```
+
 3. Open `FunctionalReactivePixels.xcworkspace`
 4. Run
 
